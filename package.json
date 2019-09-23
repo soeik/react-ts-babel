@@ -1,0 +1,111 @@
+{
+    "name": "react-ts-babel",
+    "version": "0.0.1",
+    "description": "React TypeScript babel bilerplate project",
+    "scripts": {
+        "dev": "webpack-dev-server",
+        "build": "tsc --noEmit --jsx react &&  webpack --env.production",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Kirill Stepanov",
+    "devDependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/polyfill": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/preset-typescript": "^7.6.0",
+        "@types/react": "^16.9.2",
+        "@types/react-dom": "^16.9.0",
+        "@typescript-eslint/eslint-plugin": "^1.13.0",
+        "@typescript-eslint/parser": "^1.13.0",
+        "babel-loader": "^8.0.6",
+        "compression-webpack-plugin": "^2.0.0",
+        "copy-webpack-plugin": "^5.0.4",
+        "css-loader": "^2.1.1",
+        "eslint": "^5.16.0",
+        "eslint-config-prettier": "^4.3.0",
+        "eslint-loader": "^2.2.1",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-react": "^7.14.3",
+        "file-loader": "^3.0.1",
+        "mini-css-extract-plugin": "^0.6.0",
+        "node-sass": "^4.12.0",
+        "prettier": "^1.18.2",
+        "react-hot-loader": "^4.12.14",
+        "sass-loader": "^7.3.1",
+        "style-loader": "^0.23.1",
+        "terser-webpack-plugin": "^1.4.1",
+        "typescript": "^3.6.3",
+        "url-loader": "^1.1.2",
+        "webpack": "^4.40.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.1"
+    },
+    "dependencies": {
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "commonjs": true,
+            "es6": true,
+            "node": true
+        },
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "@typescript-eslint"
+        ],
+        "extends": [
+            "prettier/@typescript-eslint",
+            "plugin:react/recommended"
+        ],
+        "parserOptions": {
+            "ecmaFeatures": {
+                "jsx": true
+            },
+            "sourceType": "module"
+        },
+        "rules": {
+            "react/display-name": "off",
+            "no-const-assign": "warn",
+            "no-this-before-super": "warn",
+            "no-undef": "warn",
+            "no-unreachable": "warn",
+            "no-unused-vars": "off",
+            "constructor-super": "warn",
+            "valid-typeof": "warn",
+            "indent": "off",
+            "@typescript-eslint/camelcase": "off",
+            "@typescript-eslint/explicit-function-return-type": [
+                "off",
+                {
+                    "allowExpressions": true,
+                    "allowTypedFunctionExpressions": true
+                }
+            ],
+            "@typescript-eslint/no-unused-vars": [
+                "warn",
+                {
+                    "vars": "all",
+                    "args": "after-used",
+                    "ignoreRestSiblings": false
+                }
+            ]
+        },
+        "settings": {
+            "react": {
+                "version": "detect"
+            }
+        }
+    },
+    "prettier": {
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": false,
+        "printWidth": 80,
+        "arrowParens": "always"
+    }
+}

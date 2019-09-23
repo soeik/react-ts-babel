@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": false,
+    "module": "es6",
+    "jsx": "react",
+    "target": "es2017",
+    "allowJs": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+        "app/*": ["src/app/*"],
+        "domain/*": ["src/domain/*"]
+    }
+  },
+  "include": [
+    "./src/**/*.*"
+
+  ]
+}
